@@ -74,7 +74,7 @@
 	/* HSL color mode */
 	--first-color: hsl(var(--hue-color), 79%, 60%);
 	--first-color-second: hsl(var(--hue-color), 69%, 61%);
-	--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+	--first-color-alt: hsl(var(--hue-color), 2%, 73%);
 	--first-color-lighter: hsl(var(--hue-color), 92%, 69%);
 	--title-color: hsl(var(--hue-color), 8%, 15%);
 	--text-color: hsl(var(--hue-color), 8%, 45%);
@@ -202,7 +202,7 @@ section {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 1rem 5% 1rem 10%;
+	padding: 1rem 5% 1rem 5%;
 	/* Timestamp - 29:25 */
 	background: transparent;
 	/* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); */
@@ -232,6 +232,7 @@ section {
 .logo img {
 	width: 40px;
 	height: 40px;
+	border-radius: 50%;
 }
 .logo .logoName {
 	font-size: var(--fs-nav-logo);
@@ -256,9 +257,12 @@ section {
 	animation: slideTop 1.2s ease forwards;
 	animation-delay: calc(0.2s * var(--i));
 }
-.navbar a:hover,
+
 .navbar a.active {
 	color: var(--clr-primary-accent);
+}
+.navbar a:hover {
+	color: var(--first-color-lighter);
 }
 #menu-icon {
 	font-size: var(--fs-nav-logo);
@@ -344,7 +348,7 @@ section {
 .home-content h1 {
 	font-size: var(--fs-primary-heading);
 	font-weight: var(--fw-bold);
-	color: var(--clr-text-light);
+	color: var(--first-color-alt);
 	/* margin: -0.8rem 0; */
 	opacity: 0;
 	animation: slideRight 1s ease forwards;
@@ -613,8 +617,9 @@ section {
 
 .services_modal-content {
 	position: relative;
-	height: 60%;
-	width: 30%;
+	height: 28rem;
+	width: 30rem;
+	overflow: auto; /* Enable scroll if needed */
 	background-color: var(--clr-modal-background);
 	padding: 2rem;
 	border-radius: 15px;
@@ -1306,7 +1311,7 @@ form textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--clr-primary-accent);
+	background-color: var(--scroll-thumb-color);
 	border-radius: 0.5rem;
 }
 
@@ -1376,6 +1381,7 @@ form textarea:focus {
 		left: 50%;
 		transform: translateX(-50%);
 	} */
+
 	#menu-icon {
 		font-size: 3rem;
 		display: block;
@@ -1417,8 +1423,8 @@ form textarea:focus {
 
 	.navbar a {
 		display: block;
-		font-size: 2.5rem;
-		margin: 5rem 0;
+		font-size: var(--fs-secondary-heading);
+		margin: 2rem 0;
 		transform: translateX(-20rem);
 		transition: 0.25s ease;
 		transition-delay: 0s;
@@ -1426,6 +1432,9 @@ form textarea:focus {
 	.navbar.active a {
 		transform: translateX(0);
 		transition-delay: 0.25s;
+	}
+	.services_container {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
@@ -1436,6 +1445,9 @@ form textarea:focus {
 	section {
 		padding: 10rem 4% 2rem;
 		/* min-height: auto; */
+	}
+	.header {
+		padding: 1rem 2%;
 	}
 	.home {
 		justify-content: center;
@@ -1460,13 +1472,12 @@ form textarea:focus {
 	}
 	#services {
 		padding-top: 5rem;
-		margin-bottom: 25rem;
+		padding-bottom: 5rem;
 	}
 
-	/* .services_container {
-		grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-		grid-gap: 5%;
-	} */
+	.services_container {
+		grid-template-columns: 1fr;
+	}
 
 	.skills {
 		flex-direction: column;
@@ -1479,16 +1490,65 @@ form textarea:focus {
 		padding: 7.5rem 10% 7.5rem 5%;
 		margin-right: 2rem;
 	}
+
+	/* Warning: Check the padding on the other elements- This is .portfolio .main-text */
+	.main-text {
+		margin-top: -5rem;
+	}
 	.portfolio-content {
-		grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
 		grid-gap: 4rem;
-		margin-top: 5rem;
-		padding: 0 15% 9rem 15%;
+		/* margin-top: 5rem; */
+		padding: 0 10% 5rem 10%;
 		text-align: center;
 	}
 	.contact {
 		grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
 		text-align: center;
+		padding: 5rem 5% 4rem 5%;
+	}
+	.contact-form form input,
+	form textarea {
+		width: 100%;
+	}
+	.footer-iconTop {
+		bottom: 20px;
+		right: 10px;
+	}
+}
+
+@media (max-width: 450px) {
+	.btn-box-nav {
+		display: none;
+	}
+	.home {
+		padding-top: 15%;
+	}
+	.about {
+		padding: 25% 5% 0;
+		grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+	}
+	.about-p450px {
+		display: none;
+	}
+	.about-img img {
+		height: 30%;
+		width: 30%;
+	}
+	.about-text h4 {
+		margin: 1rem 0 1rem;
+	}
+	.about-text p {
+		font-size: var(--fs-body-p);
+		line-height: 1.4;
+		margin-bottom: 1rem;
+	}
+	.services_modal-content {
+		height: 30rem;
+		width: 30rem;
+	}
+	.contact {
+		grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
 		padding: 5rem 5% 4rem 5%;
 	}
 	.contact-form form input,
