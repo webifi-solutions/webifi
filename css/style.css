@@ -1297,7 +1297,7 @@ form textarea:focus {
 		margin: 2.5rem auto;
 	}
 	.services_modal-content {
-		height: 74%;
+		height: auto;
 		width: 30rem;
 		padding: 1rem;
 		box-shadow: none;
