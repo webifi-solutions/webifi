@@ -161,7 +161,7 @@
 	--fs-secondary-heading: var(--fs-600);
 	--fs-nav: var(--fs-300);
 	--fs-nav-logo: var(--fs-500);
-	--fs-button: 0.8rem;
+	--fs-button: 0.9rem;
 	--fs-social: var(--fs-600);
 	--fs-radial: var(--fs-300);
 	--fs-services-title: var(--fs-500);
@@ -223,14 +223,22 @@ section {
 	transition: 1s ease;
 }
 .logo {
+	display: flex;
 	position: relative;
-	font-size: var(--fs-nav-logo);
-	color: var(--clr-text-light);
-	text-decoration: none;
-	font-weight: var(--fw-bold);
 	cursor: default;
 	opacity: 0;
 	animation: slideRight 1s ease forwards;
+}
+.logo img {
+	width: 40px;
+	height: 40px;
+}
+.logo .logoName {
+	font-size: var(--fs-nav-logo);
+	color: var(--clr-text-light);
+	font-size: 1.6rem;
+	font-weight: var(--fw-bold);
+	text-decoration: none;
 }
 /* .logo-span {
 	color: var(--clr-primary-accent);
@@ -270,8 +278,8 @@ section {
 	color: var(--clr-text-light);
 	text-decoration: none;
 	opacity: 0;
-	animation: slideTop 1s ease forwards;
-	animation-delay: 2s;
+	animation: slideTop 1.2s ease forwards;
+	animation-delay: calc(0.2s * var(--i));
 	transition: 0.2s ease;
 }
 .btn-box-nav:hover {
@@ -1150,6 +1158,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	gap: 0.3rem;
+	/* margin-left: 2rem; */
 }
 .contact-form form input,
 form textarea {
@@ -1157,7 +1166,7 @@ form textarea {
 	/* inner glow */
 	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.025);
 	outline: none;
-	width: 90%;
+	width: 80%;
 	/* padding: 1.2rem 1rem; */
 	padding: 0.7rem 1.6rem;
 	background: var(--clr-modal-background);
@@ -1190,7 +1199,7 @@ form textarea:focus {
 
 .contact-form textarea {
 	resize: none;
-	height: 12.5rem;
+	height: 15rem;
 }
 .contact-form form .send {
 	display: inline-block;
@@ -1349,11 +1358,11 @@ form textarea:focus {
 }
 
 /* --- BREAKPOINTS --- */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
 	html {
 		font-size: 55%;
 	}
-}
+} */
 
 @media (max-width: 910px) {
 	/* html {
@@ -1378,7 +1387,7 @@ form textarea:focus {
 		top: 100%;
 		left: -100%;
 		width: 100%;
-		padding: 1rem 1%;
+		padding: 1rem 5%;
 		background: #081b29;
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 		z-index: 1;
