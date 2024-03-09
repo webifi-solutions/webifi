@@ -82,7 +82,7 @@ window.addEventListener('scroll', function () {
 	clearTimeout(window.footerIconTimeout);
 	window.footerIconTimeout = setTimeout(function () {
 		footerIconTop.classList.add('hidden');
-	}, 100); // Delay in milliseconds
+	}, 500); // Delay in milliseconds
 });
 
 /* document
