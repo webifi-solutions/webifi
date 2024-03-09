@@ -56,10 +56,33 @@ window.onscroll = () => {
 
 /* =================== REMOVE BOTTOM SCROLL ICON =================== */
 // Make the footer-scroll icon to become visible only after a certain scroll position
-window.addEventListener('scroll', function () {
+/* window.addEventListener('scroll', function () {
 	var footerIconTop = document.querySelector('.footer-iconTop');
 	footerIconTop.classList.toggle('active', window.scrollY > -100);
 	footerIconTop.classList.toggle('hidden', window.scrollY <= 0);
+}); */
+
+// To make the footer-scroll icon visible only after a certain scroll position and hide it once scrolling stops, you can modify the JavaScript code as follows:
+
+window.addEventListener('scroll', function () {
+	var footerIconTop = document.querySelector('.footer-iconTop');
+
+	// Set the scroll position at which the icon becomes visible
+	var showAfterScroll = 100; // in pixels
+
+	// Add 'active' class when scrolled past 'showAfterScroll' position
+	if (window.scrollY > showAfterScroll) {
+		footerIconTop.classList.add('active');
+		footerIconTop.classList.remove('hidden');
+	} else {
+		footerIconTop.classList.remove('active');
+	}
+
+	// Hide the icon when scrolling stops after a delay
+	clearTimeout(window.footerIconTimeout);
+	window.footerIconTimeout = setTimeout(function () {
+		footerIconTop.classList.add('hidden');
+	}, 100); // Delay in milliseconds
 });
 
 /* document

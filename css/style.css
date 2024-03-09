@@ -669,258 +669,6 @@ section {
 	visibility: visible;
 }
 
-/*  *********************************  */
-/*  ***** Skills Section Start ******  */
-/*  *********************************  */
-/* <!------- Timestamp: 55:15 -------> */
-/* section {
-	display: flex;
-	flex-wrap: wrap;
-} */
-.skills {
-	display: flex;
-}
-.container1 {
-	flex-basis: 50%;
-	/* width: 600px;
-	height: 500px; */
-	padding: 0 0 5% 5%;
-	/* margin-left: 5rem; */
-}
-.container2 {
-	flex-basis: 50%;
-	/* width: 600px;
-	height: 500px; */
-	padding: 0 5% 5% 5%;
-	/* margin-right: 5rem; */
-}
-.heading1 {
-	text-align: center;
-	text-decoration: underline;
-	text-underline-offset: 1rem;
-	text-decoration-thickness: 0.5rem;
-	margin-bottom: 5rem;
-}
-.bar {
-	font-size: var(--fs-radial);
-}
-.Technical-bars .bar {
-	margin-top: 4rem 0;
-	margin-bottom: 2rem; /* Spacing between Technical Skills bars */
-}
-.Technical-bars .bar:first-child {
-	margin-top: 0;
-}
-.Technical-bars .bar:last-child {
-	margin-bottom: 0;
-}
-.Technical-bars .bar .info {
-	margin-bottom: 0.5rem;
-}
-.Technical-bars .bar .info span {
-	font-size: var(--fs-radial);
-	font-weight: var(--fw-semi-bold);
-	animation: showText 0.5s 1s linear forwards;
-	opacity: 0;
-}
-.Technical-bars .bar .progress-line {
-	position: relative;
-	border-radius: 1rem;
-	/* width: 100%; */
-	height: 0.5rem;
-	background-color: #000;
-	animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-	transform: scaleX(0);
-	transform-origin: left;
-	/* added */
-	/* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); */
-}
-@keyframes animate {
-	100% {
-		transform: scaleX(1);
-	}
-}
-.Technical-bars .bar .progress-line span {
-	height: 100%;
-	background-color: var(--clr-primary-accent);
-	position: absolute;
-	border-radius: 10px;
-	animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-	transform: scaleX(0);
-	transform-origin: left;
-}
-.progress-line.html span {
-	width: 85%;
-}
-.progress-line.css span {
-	width: 85%;
-}
-.progress-line.javascript span {
-	width: 80%;
-}
-.progress-line.react span {
-	width: 50%;
-}
-.progress-line.mongodb span {
-	width: 85%;
-}
-.progress-line.python span {
-	width: 30%;
-}
-.progress-line.java span {
-	width: 85%;
-}
-/* Perecntage value on Technical radial bars */
-.progress-line span::after {
-	position: absolute;
-	padding: 0.1rem 0.8rem;
-	background-color: #000;
-	color: #fff;
-	font-size: var(--fs-radial);
-	border-radius: 0.3rem;
-	top: -1.9rem;
-	right: -2rem;
-	animation: showText 0.5s 1.5s linear forwards;
-	opacity: 0;
-}
-.progress-line.html span::after {
-	content: '85%';
-}
-.progress-line.css span::after {
-	content: '85%';
-}
-.progress-line.javascript span::after {
-	content: '80%';
-}
-.progress-line.react span::after {
-	content: '50%';
-}
-.progress-line.mongodb span::after {
-	content: '85%';
-}
-.progress-line.python span::after {
-	content: '30%';
-}
-.progress-line.java span::after {
-	content: '85%';
-}
-.progress-line span::before {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 0;
-	border: 0.7rem solid transparent;
-	border-bottom-width: 0;
-	border-right-width: 0;
-	border-top-color: #000;
-	top: -1rem;
-	right: 0;
-	animation: showText 0.5s 1.5s linear forwards;
-	opacity: 0;
-}
-@keyframes showText {
-	100% {
-		opacity: 1;
-	}
-}
-/* <!-- Professional Skills Section --> */
-.radial-bars {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: flex-start;
-}
-.radial-bars .radial-bar {
-	width: 50%;
-	height: 17rem;
-	margin-bottom: 1rem;
-	position: relative;
-}
-.radial-bars .radial-bar svg {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(-90deg);
-	/* width: 13rem;
-	height: 18rem; */
-}
-.radial-bars .radial-bar .progress-bar {
-	stroke-width: 10;
-	stop-color: black;
-	fill: transparent;
-	stroke-dashoffset: 502;
-	stroke-linecap: round;
-	animation: animate-bar 1s linear forwards;
-}
-@keyframes animate-bar {
-	100% {
-		stroke-dashoffset: -1;
-	}
-}
-.path {
-	stroke-width: 10;
-	stroke: var(--clr-primary-accent);
-	fill: transparent;
-	stroke-dasharray: 502;
-	stroke-dashoffset: 502;
-	stroke-linecap: round;
-}
-.path-1 {
-	animation: animate-path1 1s 1s linear forwards;
-}
-.path-2 {
-	animation: animate-path2 1s 1s linear forwards;
-}
-.path-3 {
-	animation: animate-path3 1s 1s linear forwards;
-}
-.path-4 {
-	animation: animate-path4 1s 1s linear forwards;
-}
-@keyframes animate-path1 {
-	100% {
-		stroke-dashoffset: 50;
-	}
-}
-@keyframes animate-path2 {
-	100% {
-		stroke-dashoffset: 175;
-	}
-}
-@keyframes animate-path3 {
-	100% {
-		stroke-dashoffset: 125;
-	}
-}
-@keyframes animate-path4 {
-	100% {
-		stroke-dashoffset: 75;
-	}
-}
-.radial-bar .percentage {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: var(--fs-radial);
-	font-weight: var(--fw-semi-bold);
-	animation: showText 0.5s 1s linear forwards;
-	opacity: 0;
-}
-.radial-bar .text {
-	width: 100%;
-	position: absolute;
-	text-align: center;
-	left: 50%;
-	bottom: 2rem;
-	transform: translateX(-5rem);
-	font-size: var(--fs-radial);
-	font-weight: var(--fw-semi-bold);
-	animation: showText 0.5s 1s linear forwards;
-	opacity: 0;
-}
-
 /*  ********************************* */
 /*  **** Portfolio Section Start **** */
 /*  ********************************* */
@@ -1512,8 +1260,8 @@ form textarea:focus {
 		width: 100%;
 	}
 	.footer-iconTop {
-		bottom: 20px;
-		right: 10px;
+		right: 1rem;
+		opacity: 0.25;
 	}
 }
 
@@ -1522,7 +1270,7 @@ form textarea:focus {
 		display: none;
 	}
 	.home {
-		padding-top: 15%;
+		padding-top: 5rem;
 	}
 	.about {
 		padding: 25% 5% 0;
@@ -1531,10 +1279,10 @@ form textarea:focus {
 	.about-p450px {
 		display: none;
 	}
-	.about-img img {
+	/* .about-img img {
 		height: 30%;
 		width: 30%;
-	}
+	} */
 	.about-text h4 {
 		margin: 1rem 0 1rem;
 	}
@@ -1543,9 +1291,14 @@ form textarea:focus {
 		line-height: 1.4;
 		margin-bottom: 1rem;
 	}
+	.services_container {
+		margin: 2.5rem auto;
+	}
 	.services_modal-content {
-		height: 30rem;
+		height: 80%;
 		width: 30rem;
+		padding: 1rem;
+		box-shadow: none;
 	}
 	.contact {
 		grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
