@@ -264,6 +264,9 @@ section {
 .navbar a:hover {
 	color: var(--first-color-lighter);
 }
+.navbar a .navbar-contact {
+	display: none;
+}
 #menu-icon {
 	font-size: var(--fs-nav-logo);
 	color: #fff;
@@ -1261,7 +1264,6 @@ form textarea:focus {
 	}
 	.footer-iconTop {
 		right: 1rem;
-		opacity: 0.25;
 	}
 }
 
