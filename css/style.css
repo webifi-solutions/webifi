@@ -1270,7 +1270,7 @@ form textarea:focus {
 		display: none;
 	}
 	.home {
-		padding-top: 5rem;
+		padding-top: 10%;
 	}
 	.about {
 		padding: 25% 5% 0;
