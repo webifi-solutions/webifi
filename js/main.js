@@ -125,3 +125,74 @@ window.addEventListener('click', (event) => {
 		}
 	});
 });
+
+/* ======================== PRODUCTS MODAL ========================= */
+/* // Get the modal
+var productModal = document.querySelector('.products_modal');
+
+// Get the button that opens the modal
+var btn = document.querySelector('.products_button');
+
+// Get the element that closes the modal
+var span = document.querySelector('.products_modal-close');
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+	productModal.style.display = 'flex';
+	//productModal.style.display = 'block';
+};
+
+// When the user clicks on (x), close the modal
+span.onclick = function () {
+	productModal.style.display = 'none';
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+	if (event.target == productModal) {
+		productModal.style.display = 'none';
+	}
+}; */
+
+/* ======================== PRODUCTS MODAL ========================= */
+// Get all the modals
+var modals = document.querySelectorAll('.products_modal');
+
+// Get all the buttons that open the modals
+var btns = document.querySelectorAll('.products_button');
+
+// Get all the elements that close the modals
+var spans = document.querySelectorAll('.products_modal-close');
+
+// Function to open a modal
+function openModal(modal) {
+	modal.style.display = 'flex';
+}
+
+// Function to close a modal
+function closeModal(modal) {
+	modal.style.display = 'none';
+}
+
+// Loop through all the buttons to add click event
+btns.forEach((btn, index) => {
+	btn.addEventListener('click', () => {
+		openModal(modals[index]);
+	});
+});
+
+// Loop through all the close buttons to add click event
+spans.forEach((span, index) => {
+	span.addEventListener('click', () => {
+		closeModal(modals[index]);
+	});
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (event) => {
+	modals.forEach((modal) => {
+		if (event.target == modal) {
+			closeModal(modal);
+		}
+	});
+});

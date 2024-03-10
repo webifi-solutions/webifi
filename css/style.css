@@ -340,8 +340,8 @@ section {
 	font-size: var(--fs-primary-heading);
 	font-weight: var(--fw-bold);
 	opacity: 0;
-	animation: slideTop 1s ease forwards;
-	animation-delay: 0.7s;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1.2s;
 }
 .home .home-content-intro:nth-last-of-type(2) {
 	margin-bottom: 1rem;
@@ -352,10 +352,14 @@ section {
 	font-size: var(--fs-primary-heading);
 	font-weight: var(--fw-bold);
 	color: var(--first-color-alt);
+	text-shadow: 1px 1px 2px black, 0 0 5px var(--clr-primary-accent),
+		0 0 5px var(--clr-primary-accent);
 	/* margin: -0.8rem 0; */
-	opacity: 0;
-	animation: slideRight 1s ease forwards;
-	animation-delay: 1s;
+	/* opacity: 0; */
+	animation: slideTop 1s ease forwards;
+	animation-delay: 0.7s;
+	/* animation: slideRight 1s ease forwards;
+	animation-delay: 1s; */
 	/* transition: 2s; */
 }
 .home .home-content-intro span {
@@ -563,7 +567,7 @@ section {
 	opacity: 0;
 	cursor: pointer;
 	animation: slideBottom 1s ease forwards;
-	animation-delay: 1.5s;
+	animation-delay: 0.8s;
 	transition: 0.8s;
 	/* box-shadow: 0 0 5px #0ef, 0 0 25px #0ef; */
 }
@@ -598,7 +602,7 @@ section {
 	transform: translateX(0.25rem);
 }
 
-/*  ************ Modal *************  */
+/*  ************ Services Modal *************  */
 
 .services_modal {
 	position: fixed;
@@ -626,8 +630,10 @@ section {
 	background-color: var(--clr-modal-background);
 	padding: 2rem;
 	border-radius: 15px;
-	box-shadow: 1px 1px 20px var(--clr-primary-accent),
-		1px 1px 40px var(--clr-primary-accent);
+	/* Sleek box-shadow */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/* box-shadow: 1px 1px 20px var(--clr-primary-accent),
+		1px 1px 40px var(--clr-primary-accent); */
 }
 
 .services_modal-services {
@@ -655,7 +661,8 @@ section {
 	color: var(--clr-text-light);
 	cursor: pointer;
 }
-.services_modal-close:hover {
+.services_modal-close:hover,
+.services_modal-close:focus {
 	color: var(--clr-primary-accent);
 }
 
@@ -672,9 +679,9 @@ section {
 	visibility: visible;
 }
 
-/*  ********************************* */
-/*  **** Portfolio Section Start **** */
-/*  ********************************* */
+/*  ************************************************************************* */
+/*  ************************* Product Section Start ************************* */
+/*  ************************************************************************* */
 /* .main-text {
 	padding-top: 2rem;
 } */
@@ -687,30 +694,30 @@ section {
 .main-text h2 span {
 	color: var(--clr-primary-accent);
 }
-.portfolio-content {
+.portfolio_container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(8em, auto));
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-columns: repeat(auto-fit, minmax(35rem, auto)); */
 	/* grid-template-columns: repeat(auto-fit, minmax(10em, 1fr)); */
 	grid-gap: 5%;
 	margin-top: 5rem;
 	/* padding: 0 5%; */
 }
-.row {
+.products_content {
 	position: relative;
 	overflow: hidden;
 	border-radius: 0.8rem;
 	box-shadow: 1px 1px 10px var(--clr-primary-accent),
 		1px 1px 20px var(--clr-primary-accent);
-	cursor: pointer;
 }
 
-.row:hover {
+.products_content:hover {
 	box-shadow: 0.8px 0.8px 15px var(--clr-primary-accent),
 		1px 1px 40px var(--clr-primary-accent);
 	transition: 0.5s ease-in-out;
 }
 
-.row img {
+.products_content img {
 	width: 100%;
 	height: 100%;
 	border-radius: 0.8rem;
@@ -720,12 +727,18 @@ section {
 .layer {
 	width: 100%;
 	height: 0;
-	/* background: linear-gradient(rgba(0, 0, 0, 0, 1), #0ef); */
-	/* background: linear-gradient(
-		0deg,
-		rgba(0, 238, 255, 1) 5%,
-		rgba(0, 126, 135, 0.09567577030812324) 68%
-	); */
+	position: absolute;
+	border-radius: 0.8rem;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 4rem;
+	transition: height 0.5s ease;
 	background-image: linear-gradient(
 		to bottom,
 		rgba(209, 107, 165, 0.6),
@@ -741,50 +754,160 @@ section {
 		rgba(17, 226, 255, 0.6),
 		rgba(0, 238, 255, 0.6)
 	);
-	/* 	background-image: linear-gradient(
-		to top,
-		rgba(209, 107, 165, 0.6),
-		rgba(199, 119, 185, 0.6),
-		rgba(186, 131, 202, 0.6),
-		rgba(170, 143, 216, 0.6),
-		rgba(154, 154, 225, 0.6),
-		rgba(139, 165, 235, 0.6),
-		rgba(124, 176, 242, 0.6),
-		rgba(108, 186, 247, 0.6),
-		rgba(84, 200, 255, 0.6),
-		rgba(54, 200, 255, 0.6),
-		rgba(17, 226, 255, 0.6),
-		rgba(0, 238, 255, 0.6)
-	); */
-	position: absolute;
-	border-radius: 0.8rem;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 0 4rem;
-	transition: height 0.5s ease;
 }
-.layer h5 {
+.layer .products_title {
 	color: #fff;
-	font-size: var(--fs-button);
+	/* font-size: var(--fs-button); */
+	font-size: var(--fs-services-title);
 	font-weight: 600;
 	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 	/* text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff; */
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 }
-.layer p {
+.layer .layer-p {
 	color: #fff;
-	font-size: var(--fs-button);
+	/* font-size: var(--fs-button); */
+	font-size: var(--fs-services-content);
 	font-weight: 500;
 	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 	line-height: 1.6;
 }
-.layer i {
+
+.products_content:hover img {
+	transform: scale(1.05);
+}
+.products_content:hover .layer {
+	height: 100%;
+}
+
+.products_button {
+	font-size: var(--fs-button);
+	margin-top: 1rem;
+	display: inline-block;
+	padding: 0.9rem 1rem;
+	background-image: linear-gradient(
+		to right,
+		#9261f8,
+		#7f70fd,
+		#6c7dff,
+		#5b87ff,
+		#4d91ff
+	);
+	border-radius: 15px;
+	color: var(--clr-text-light);
+	text-decoration: none;
+	font-weight: var(--fw-bold);
+	opacity: 0;
+	cursor: pointer;
+	animation: slideBottom 1s ease forwards;
+	animation-delay: 0.5s;
+	transition: 0.8s;
+	/* box-shadow: 0 0 5px #0ef, 0 0 25px #0ef; */
+}
+
+.products_button:hover {
+	background-image: linear-gradient(
+		to left,
+		#9261f8,
+		#7f70fd,
+		#6c7dff,
+		#5b87ff,
+		#4d91ff
+	);
+}
+.button_icon-products {
+	font-size: var(--fs-button);
+	margin-left: 0.25rem;
+	transition: 0.3s;
+}
+.products_button:hover .button_icon-products {
+	transform: translateX(0.25rem);
+}
+
+/*  ************ Product Modal *************  */
+
+/* .products_modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 1rem;
+	z-index: 1000;
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+} */
+
+/* Style the modal to display in the center of the screen */
+.products_modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1000; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* .products_modal-content {
+	position: relative;
+	height: 28rem;
+	width: 30rem;
+	overflow: auto;
+	background-color: var(--clr-modal-background);
+	padding: 2rem;
+	border-radius: 15px;
+	box-shadow: 1px 1px 20px var(--clr-primary-accent),
+		1px 1px 40px var(--clr-primary-accent);
+} */
+
+/* Modal Content */
+.products_modal-content {
+	position: relative; /* Position relative to the modal */
+	background-color: var(--clr-modal-background);
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 2rem;
+	border-radius: 15px;
+	width: 60%; /* Could be more or less, depending on screen size */
+	/* Sleek box-shadow */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products_modal-products {
+	display: grid;
+	/* gap: 1rem; */
+	row-gap: 0.8rem;
+}
+
+.products_modal-product {
+	/* display: flex; */
+	text-align: left;
+}
+.products_modal-product-benefits {
+	text-align: left;
+	margin-top: 1.2rem;
+}
+
+.products_modal-title {
+	font-size: var(--fs-services-title);
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+
+.product_button-modal {
+	display: inline-block;
+}
+.layer .products_modal .products_modal-content .product-external-link-icon {
 	color: #ff004f;
 	margin-top: 2rem;
 	font-size: var(--fs-social);
@@ -797,7 +920,10 @@ section {
 	border: 1px outset #9fa4ba;
 	border-radius: 50%;
 }
-.layer i:hover {
+.layer
+	.products_modal
+	.products_modal-content
+	.product-external-link-icon:hover {
 	color: #000;
 	background: var(--clr-primary-accent);
 	font-weight: var(--fw-semi-bold);
@@ -809,16 +935,46 @@ section {
 	text-decoration: none;
 }
 
-.row:hover img {
-	transform: scale(1.05);
+/* .products_modal-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	font-size: var(--fs-social);
+	font-weight: var(--fw-bold);
+	color: var(--clr-text-light);
+	cursor: pointer;
+} */
+/* The Close Button */
+/* Style the close button to be positioned absolutely */
+.products_modal-close {
+	position: absolute; /* Absolute position */
+	top: 1.225rem; /* 10px from the top */
+	right: 1.225rem; /* 10px from the right */
+	font-size: var(--fs-social);
+	font-weight: var(--fw-bold);
+	color: var(--clr-text-light);
+	cursor: pointer;
 }
-.row:hover .layer {
-	height: 100%;
+/* .products_modal-close:hover {
+	color: var(--clr-primary-accent);
+} */
+.products_modal-close:hover,
+.products_modal-close:focus {
+	color: var(--clr-primary-accent);
+	text-decoration: none;
+	cursor: pointer;
 }
-/*  ********************************* */
-/*  ***** Contact Section Start ***** */
-/*  ********************************* */
-/* <!----- Timestamp: 1:28:29 ------> */
+
+/* .products_modal-icon {
+	font-size: var(--fs-button);
+	color: var(--clr-primary-accent);
+	margin-right: 0.6rem;
+	margin-top: 0.285rem;
+} */
+
+/*  ******************************************************************************** */
+/*  ****************************** Contact Section Start *************************** */
+/*  ******************************************************************************** */
 .contact {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -1187,6 +1343,9 @@ form textarea:focus {
 	.services_container {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.portfolio_container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 700px) {
@@ -1229,6 +1388,9 @@ form textarea:focus {
 	.services_container {
 		grid-template-columns: 1fr;
 	}
+	.portfolio_container {
+		grid-template-columns: 1fr;
+	}
 
 	.skills {
 		flex-direction: column;
@@ -1246,12 +1408,11 @@ form textarea:focus {
 	.main-text {
 		margin-top: -5rem;
 	}
-	.portfolio-content {
-		grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-		grid-gap: 4rem;
-		/* margin-top: 5rem; */
-		padding: 0 10% 5rem 10%;
-		text-align: center;
+	.portfolio_container {
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+		/* grid-gap: 4rem;
+		padding: 0 10% 5rem;
+		text-align: center; */
 	}
 	.contact {
 		grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
@@ -1298,9 +1459,24 @@ form textarea:focus {
 	}
 	.services_modal-content {
 		height: auto;
-		width: 30rem;
+		/* width: 30rem; */
+	}
+	.portfolio_container {
+		padding: 0 2rem;
+	}
+	.product_modal-content {
+		height: 10rem;
+		/* width: 30rem; */
 		padding: 1rem;
-		box-shadow: none;
+	}
+	.layer .products-layer-ul-450px {
+		display: none;
+	}
+	.products_button {
+		margin-top: 0rem;
+	}
+	.products_modal-content {
+		width: 95%;
 	}
 	.contact {
 		grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
