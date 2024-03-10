@@ -1230,13 +1230,13 @@ form textarea:focus {
 	display: grid;
 	/* grid-template-columns: repeat(2, 1fr); */
 	/* align-items: center; */
-	padding: 8% 7% 1%;
+	padding: 5rem 5rem 0rem;
 	text-align: left;
 	/* padding-top: 5%;
 	margin-right: 5%; */
 }
 .terms-text {
-	padding-top: 50px;
+	padding-top: 2rem;
 	border-top: 2px solid var(--clr-text-light);
 }
 .terms-text p {
@@ -1517,6 +1517,9 @@ form textarea:focus {
 	.contact-form form input,
 	form textarea {
 		width: 100%;
+	}
+	.terms {
+		padding: 5rem 2rem 0rem;
 	}
 }
 @media (max-width: 250px) {
