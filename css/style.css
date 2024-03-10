@@ -352,8 +352,9 @@ section {
 	font-size: var(--fs-primary-heading);
 	font-weight: var(--fw-bold);
 	color: var(--first-color-alt);
-	text-shadow: 1px 1px 2px black, 0 0 5px var(--clr-primary-accent),
-		0 0 5px var(--clr-primary-accent);
+	text-shadow: 1px 1px 4px #9261f8, 0 0 5px #6c7dff, 0 0 6px #4d91ff;
+	/* text-shadow: 1px 1px 2px black, 0 0 5px var(--clr-primary-accent),
+		0 0 5px var(--clr-primary-accent); */
 	/* margin: -0.8rem 0; */
 	/* opacity: 0; */
 	animation: slideTop 1s ease forwards;
