@@ -352,7 +352,7 @@ section {
 	font-size: var(--fs-primary-heading);
 	font-weight: var(--fw-bold);
 	color: var(--first-color-alt);
-	text-shadow: 0px 0px 3px #9261f8, 0 0 3px #6c7dff, 0 0 1px #4d91ff;
+	/* text-shadow: 0px 0px 3px #642ed9, 0 0 3px #6c7dff, 0 0 1px #4d91ff; */
 	/* text-shadow: 1px 1px 2px black, 0 0 5px var(--clr-primary-accent),
 		0 0 5px var(--clr-primary-accent); */
 	/* margin: -0.8rem 0; */
@@ -1175,6 +1175,14 @@ form textarea:focus {
 	font-weight: 300;
 	margin-top: 7rem; */
 }
+.footer-text a {
+	font-size: var(--fs-nav);
+	color: #26a7d8;
+	text-decoration: none;
+}
+.footer-text a:hover {
+	color: #30c5ff;
+}
 .footer-iconTop {
 	position: fixed;
 	/* bottom: 2%;
@@ -1214,6 +1222,35 @@ form textarea:focus {
 .footer-iconTop:hover {
 	opacity: 1;
 }
+
+/*  ********************************* */
+/*  ****** Terms and Conditions Section Start ****** */
+/*  ********************************* */
+.terms {
+	display: grid;
+	/* grid-template-columns: repeat(2, 1fr); */
+	/* align-items: center; */
+	padding: 8% 7% 1%;
+	text-align: left;
+	/* padding-top: 5%;
+	margin-right: 5%; */
+}
+.terms-text {
+	padding-top: 50px;
+	border-top: 2px solid var(--clr-text-light);
+}
+.terms-text p {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px; /* Adjust the gap size as needed */
+	color: var(--clr-text-light-alt);
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+/*  ************************************************ */
+/*  ****** Terms and Conditions Section End ****** */
+/*  ************************************************ */
 
 /* ========= SCROLL BAR ========== */
 ::-webkit-scrollbar {
