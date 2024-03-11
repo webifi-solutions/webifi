@@ -1520,6 +1520,9 @@ form textarea:focus {
 	.services_container {
 		margin: 2.5rem auto;
 	}
+	.services_modal {
+		padding: 0 0.125rem;
+	}
 	.services_modal-content {
 		height: auto;
 		/* width: 30rem; */
@@ -1532,6 +1535,9 @@ form textarea:focus {
 	}
 	.products_button {
 		margin-top: 0rem;
+	}
+	.products_modal {
+		padding: 0 0.125rem;
 	}
 	.products_modal-content {
 		height: auto;
