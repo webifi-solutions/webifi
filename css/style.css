@@ -484,13 +484,22 @@ section {
 	margin-bottom: 4rem;
 	margin-top: 4rem; */
 }
-.sub-title {
+.title-services {
 	text-align: center;
 	font-size: var(--fs-primary-heading);
 	/* padding-bottom: 1rem; */
 }
-.sub-title span {
+
+.title-services span {
 	color: var(--clr-primary-accent);
+}
+.sub-title-services {
+	font-size: var(--fs-secondary-heading);
+	font-weight: var(--fw-bold);
+	color: var(--clr-text-light);
+	text-align: center;
+	line-height: 1.7;
+	margin: 1rem 0 2rem;
 }
 .container {
 	padding: 3%;
@@ -694,6 +703,14 @@ section {
 }
 .main-text h2 span {
 	color: var(--clr-primary-accent);
+}
+.sub-title-products {
+	font-size: var(--fs-secondary-heading);
+	font-weight: var(--fw-bold);
+	color: var(--clr-text-light);
+	text-align: center;
+	line-height: 1.7;
+	margin: 1rem 0 2rem;
 }
 .portfolio_container {
 	display: grid;
