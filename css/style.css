@@ -1021,10 +1021,8 @@ section {
 .contact-list li {
 	margin: 1.5rem 0 1rem 0;
 	color: var(--clr-text-light-alt);
-	/* color: #e4e4e4; */
 	font-size: var(--fs-body-p);
 	font-weight: var(--fw-semi-bold);
-	/* margin-bottom: 1rem; */
 	display: block;
 	transition: all 0.2s ease;
 }
@@ -1033,6 +1031,17 @@ section {
 	color: var(--clr-primary-accent);
 	cursor: pointer;
 }
+
+.contact-list a {
+	color: var(--clr-text-light-alt);
+	font-size: var(--fs-body-p);
+	font-weight: var(--fw-semi-bold);
+	text-decoration: none;
+}
+.contact-list a:hover {
+	color: var(--clr-primary-accent);
+}
+
 .contact-list i {
 	display: inline-block;
 	color: var(--clr-primary-accent);
