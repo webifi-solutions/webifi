@@ -41,10 +41,23 @@ window.onscroll = () => {
 		// if want to use animation that repeats on scroll use this
 	});
 
-	//sticky header
+	/* ========== Sticky Header: Disabled when the viewport is 450px or less. =========== */
 	let header = document.querySelector('header');
 
-	header.classList.toggle('sticky', window.scrollY > 90);
+	window.addEventListener('scroll', function () {
+		if (window.matchMedia('(max-width: 450px)').matches) {
+			// If the viewport is 450px or less, remove the 'sticky' class
+			header.classList.remove('sticky');
+		} else {
+			// Otherwise, toggle the 'sticky' class based on scroll position
+			header.classList.toggle('sticky', window.scrollY > 90);
+		}
+	});
+
+	//sticky header
+	/* let header = document.querySelector('header');
+
+	header.classList.toggle('sticky', window.scrollY > 90); */
 
 	// Make the top element to become sticky only after a certain scroll position
 	/* Add code here */
