@@ -72,7 +72,7 @@
 	--hue-color: 201; /* Purple 250 - Green 142 - Blue 230 - Pink 340 */
 
 	/* HSL color mode */
-	--first-color: hsl(var(--hue-color), 79%, 60%);
+	--first-color: hsl(var(--hue-color), 79%, 60%); /* Hex Value: #47b1e9 */
 	--first-color-second: hsl(var(--hue-color), 69%, 61%);
 	--first-color-alt: hsl(var(--hue-color), 79%, 73%);
 	--first-color-lighter: hsl(var(--hue-color), 92%, 69%);
