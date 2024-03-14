@@ -213,14 +213,15 @@ section {
 	align-items: center;
 	z-index: 100;
 }
-/* javascript css for sticky header after scrollY > 100 */
+/* javascript css for sticky header after scrollY > 60 */
 .header.sticky {
 	background: var(--clr-background-secondary-accent);
 	/* opacity: 0.9; */
 	/* box-shadow: none; */
 	/* box-shadow: 0px 0px 10px #012290f7, 0px 0px 10px #0053b8f7; */
 	/* box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7; */
-	transition: 1s ease;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+	transition: 0.5s ease;
 }
 .logo {
 	display: flex;
@@ -1236,11 +1237,11 @@ form textarea:focus {
 }
 
 .footer-iconTop a i {
-	color: #000;
+	color: #fff;
 	background: var(--clr-primary-accent);
 	font-size: var(--fs-social);
 	padding: 0.5rem;
-	border-radius: 15px;
+	border-radius: 50%;
 	transition: 0.5s ease;
 }
 
@@ -1259,6 +1260,7 @@ form textarea:focus {
 /*  ********************************* */
 /*  ****** Terms and Conditions Section Start ****** */
 /*  ********************************* */
+
 .terms {
 	display: grid;
 	/* grid-template-columns: repeat(2, 1fr); */

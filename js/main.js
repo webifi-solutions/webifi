@@ -1,12 +1,19 @@
-/* js for library from the CDN for typed.js from [https://github.com/mattboldt/typed.js] */
-var typed = new Typed('.text', {
-	strings: ['Websites', 'Applications', 'Software', 'Development'],
-	typeSpeed: 100,
-	backSpeed: 100,
-	backDelay: 1000,
-	loop: true,
+/* ========== Sticky Header: Disabled when the viewport is 450px or less. =========== */
+let headers = document.querySelectorAll('header');
+
+window.addEventListener('scroll', function () {
+	headers.forEach(function (header) {
+		if (window.matchMedia('(max-width: 450px)').matches) {
+			// If the viewport is 450px or less, remove the 'sticky' class
+			header.classList.remove('sticky');
+		} else {
+			// Otherwise, toggle the 'sticky' class based on scroll position
+			header.classList.toggle('sticky', window.scrollY > 60);
+		}
+	});
 });
 
+/* ============================== Nav Bar Toggle Icon =============================== */
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -39,19 +46,6 @@ window.onscroll = () => {
 			// active sections for animation on scroll
 		}
 		// if want to use animation that repeats on scroll use this
-	});
-
-	/* ========== Sticky Header: Disabled when the viewport is 450px or less. =========== */
-	let header = document.querySelector('header');
-
-	window.addEventListener('scroll', function () {
-		if (window.matchMedia('(max-width: 450px)').matches) {
-			// If the viewport is 450px or less, remove the 'sticky' class
-			header.classList.remove('sticky');
-		} else {
-			// Otherwise, toggle the 'sticky' class based on scroll position
-			header.classList.toggle('sticky', window.scrollY > 90);
-		}
 	});
 
 	//sticky header
@@ -95,7 +89,7 @@ window.addEventListener('scroll', function () {
 	clearTimeout(window.footerIconTimeout);
 	window.footerIconTimeout = setTimeout(function () {
 		footerIconTop.classList.add('hidden');
-	}, 500); // Delay in milliseconds
+	}, 800); // Delay in milliseconds
 });
 
 /* document
