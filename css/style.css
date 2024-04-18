@@ -263,11 +263,9 @@ body.dark-theme {
 }
 .dark-theme .contact-form form input::placeholder {
 	color: #292b2f;
-	font-weight: 500;
 }
 .dark-theme .contact-form form textarea::placeholder {
 	color: #292b2f;
-	font-weight: 500;
 }
 .dark-theme .contact-form form .send {
 	background-image: var(--background-img);
