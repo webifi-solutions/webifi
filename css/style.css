@@ -253,11 +253,21 @@ body.dark-theme {
 }
 .dark-theme .contact-form form input {
 	background: #9fa4ba;
-	/* color: #081b29; */
+	color: #000;
+	font-weight: 500;
 }
 .dark-theme .contact-form form textarea {
 	background: #9fa4ba;
-	/* color: #1d1e22; */
+	color: #000;
+	font-weight: 500;
+}
+.dark-theme .contact-form form input::placeholder {
+	color: #292b2f;
+	font-weight: 500;
+}
+.dark-theme .contact-form form textarea::placeholder {
+	color: #292b2f;
+	font-weight: 500;
 }
 .dark-theme .contact-form form .send {
 	background-image: var(--background-img);
