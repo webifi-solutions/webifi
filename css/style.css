@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-	--ovc-main-color: #1e1e1e;
+	/* --ovc-main-color: #1e1e1e;
 	--secondary-color: #474343;
 	--ovc-white: #ffffff;
 	--ovc-text-color: var(--ovc-white);
@@ -44,15 +44,15 @@
 	--docsearch-footer-height: 44px;
 	--docsearch-footer-background: #fff;
 	--docsearch-footer-shadow: 0 -1px 0 0 #e0e3e8,
-		0 -3px 6px 0 rgba(69, 98, 155, 0.12);
+		0 -3px 6px 0 rgba(69, 98, 155, 0.12); */
 
 	/* ------------------------------ */
 
-	--docsearch-muted-color: #969faf;
+	/* --docsearch-muted-color: #969faf; */
 
 	/* ------------------------------ */
 
-	--clr-pink: #d16ba5;
+	/* 	--clr-pink: #d16ba5;
 	--clr-purple: #86a8e7;
 	--clr-green: #5ffbf1;
 
@@ -60,10 +60,10 @@
 	--clr-purple-alt: #86a8e7;
 	--clr-plum: #9261f8;
 	--clr-blue: #4d91ff;
-	--clr-blue-alt: #47b1e9; /* HSL Conversion: 	hsl(201, 79%, 60%)  */
+	--clr-blue-alt: #47b1e9; HSL Conversion: 	hsl(201, 79%, 60%)
 	--clr-grey-light: #98a7c0;
 	--clr-grey-mid: #5c6574;
-	--clr-grey-dark: #3e444e;
+	--clr-grey-dark: #3e444e; */
 
 	/* -- HSL Color Theme Start -- */
 
@@ -172,6 +172,104 @@
 	--clr-neutral-200: hsl(210, 30%, 85%);
 	--clr-neutral-100: hsl(210, 30%, 95%); */
 }
+
+/*=============== THEME ===============*/
+.change-theme {
+	font-size: 1.25rem;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s;
+	padding-left: 2rem;
+	animation: slideTop 1.2s ease forwards;
+	animation-delay: calc(0.2s * var(--i));
+	transition: 0.2s ease;
+}
+.change-theme:hover {
+	color: var(--first-color);
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+	/* --first-color: hsl(228, 66%, 62%);
+	--second-color: hsl(25, 57%, 54%);
+	--title-color: hsl(228, 8%, 95%);
+	--text-color: hsl(228, 8%, 70%);
+	--border-color: hsl(228, 16%, 14%);
+	--body-color: hsl(228, 12%, 8%);
+	--container-color: hsl(228, 16%, 12%); */
+
+	--clr-background-primary-accent: hsl(228, 8%, 95%);
+	--clr-text-light: #081b29;
+	--clr-text-light-alt: #081b29;
+	/* --first-color: #081b29;
+	--first-color-second: #081b29;
+	--clr-primary-accent: #081b29; */
+
+	--button-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19); /* #0ef CONVERTED to rgba(0, 238, 255, 1) */
+
+	--box-shadow-img: 0 0 10px #47b1e9, 0 0 100px #47b1e9, 0 0 500px #47b1e9,
+		0 0 1000px #47b1e9, 0 0 2000px #47b1e9;
+
+	--clr-text-dark: aliceblue;
+	color: #081b29;
+}
+
+/*==========
+    Color changes in some parts of
+    the website, in dark theme
+==========*/
+
+.dark-theme .home-content p {
+	color: #081b29;
+	font-weight: var(--fw-semi-bold);
+}
+.dark-theme .header.sticky {
+	background: var(--clr-background-primary-accent);
+}
+.dark-theme .change-theme {
+	color: #081b29;
+}
+.dark-theme .change-theme:hover {
+	color: var(--clr-primary-accent);
+}
+.dark-theme #menu-icon {
+	color: #081b29;
+}
+.dark-theme .services_modal-content {
+	background-color: #f0ebf8;
+}
+.dark-theme .services_content {
+	background-color: #f0ebf8;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dark-theme .products_content {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dark-theme .products_modal-content {
+	color: #081b29;
+	background-color: #f0ebf8;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dark-theme .contact-form form input {
+	background: #9fa4ba;
+	/* color: #081b29; */
+}
+.dark-theme .contact-form form textarea {
+	background: #9fa4ba;
+	/* color: #1d1e22; */
+}
+.dark-theme .contact-form form .send {
+	background-image: var(--background-img);
+}
+.dark-theme .terms {
+	background-color: #f0ebf8;
+}
+.dark-theme .terms-text p {
+	color: #081b29;
+}
+
+/*=============== BASE ===============*/
 * {
 	margin: 0;
 	padding: 0;
@@ -198,6 +296,7 @@ section {
 	padding: 10rem 5% 2rem;
 }
 
+/*=============== HEADER & NAV ===============*/
 .header {
 	position: fixed;
 	top: 0;
@@ -1372,6 +1471,9 @@ form textarea:focus {
 		/* order: -1;
 		left: 0; */
 	}
+	.dark-theme .navbar {
+		background: #9fa4ba;
+	}
 	.navbar {
 		position: absolute;
 		top: 100%;
@@ -1387,6 +1489,9 @@ form textarea:focus {
 	.navbar.active {
 		left: 0;
 		transition-delay: 0s;
+	}
+	.dark-theme .navbar .active-nav {
+		background: #f0ebf8;
 	}
 	.navbar .active-nav {
 		position: absolute;
@@ -1501,6 +1606,10 @@ form textarea:focus {
 }
 
 @media (max-width: 450px) {
+	.dark-theme .header {
+		/* background: hsl(228, 8%, 95%); */
+		background: #47b1e9;
+	}
 	.header {
 		background: var(--clr-background-secondary-accent);
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);

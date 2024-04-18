@@ -78,7 +78,7 @@ window.onscroll = () => {
 	footerIconTop.classList.toggle('hidden', window.scrollY <= 0);
 }); */
 
-// To make the footer-scroll icon visible only after a certain scroll position and hide it once scrolling stops, you can modify the JavaScript code as follows:
+// To make the footer-scroll icon visible only after a certain scroll position and hide it once scrolling stops:
 
 window.addEventListener('scroll', function () {
 	var footerIconTop = document.querySelector('.footer-iconTop');
@@ -98,7 +98,7 @@ window.addEventListener('scroll', function () {
 	clearTimeout(window.footerIconTimeout);
 	window.footerIconTimeout = setTimeout(function () {
 		footerIconTop.classList.add('hidden');
-	}, 800); // Delay in milliseconds
+	}, 2000); // Delay in milliseconds
 });
 
 /* document
@@ -211,4 +211,40 @@ window.addEventListener('click', (event) => {
 			closeModal(modal);
 		}
 	});
+});
+
+/*=============== DARK LIGHT THEME ===============*/
+const themeButton = document.getElementById('theme-btn');
+const darkTheme = 'dark-theme';
+const iconTheme = 'bx-sun';
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () =>
+	document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () =>
+	themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun';
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+	// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+	document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+		darkTheme
+	);
+	themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](
+		iconTheme
+	);
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+	// Add or remove the dark / icon theme
+	document.body.classList.toggle(darkTheme);
+	themeButton.classList.toggle(iconTheme);
+	// We save the theme and the current icon that the user chose
+	localStorage.setItem('selected-theme', getCurrentTheme());
+	localStorage.setItem('selected-icon', getCurrentIcon());
 });
