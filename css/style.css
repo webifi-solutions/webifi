@@ -272,12 +272,12 @@ body.dark-theme {
 .dark-theme .contact-form form .send {
 	background-image: var(--background-img);
 }
-.dark-theme .terms {
+/* .dark-theme .terms {
 	background-color: #f0ebf8;
 }
 .dark-theme .terms-text p {
 	color: #081b29;
-}
+} */
 
 /*=============== BASE ===============*/
 * {
@@ -1394,6 +1394,163 @@ form textarea:focus {
 }
 /*  ************************************************ */
 /*  ****** Terms and Conditions Section End ****** */
+/*  ************************************************ */
+
+/*  ************************************************ */
+/*  *********** Portfolio Section Start ************ /
+/*  ************************************************ */
+/* #portfolio {
+	color: aliceblue;
+	font-size: var(--fs-500);
+	line-height: 1.4;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+} */
+.portfolio {
+	padding: 3% 5% 2rem;
+	/* color: aliceblue;
+	font-size: var(--fs-500);
+	line-height: 1.4;
+	margin-bottom: 4rem;
+	margin-top: 4rem; */
+}
+.title-portfolio {
+	text-align: center;
+	font-size: var(--fs-primary-heading);
+	/* padding-bottom: 1rem; */
+}
+
+.title-portfolio span {
+	color: var(--clr-primary-accent);
+}
+.sub-title-portfolio {
+	font-size: var(--fs-secondary-heading);
+	font-weight: var(--fw-bold);
+	color: var(--clr-text-light);
+	text-align: center;
+	line-height: 1.7;
+	margin: 1rem 0 2rem;
+}
+.portfolio .container {
+	padding: 3%;
+}
+.portfolio_container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); */
+	/* grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr)); */
+	gap: 3rem;
+	max-width: 1200px;
+	width: 95%;
+	margin: 5rem auto;
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 5%;
+	margin-top: 5rem; */
+}
+.portfolio_card {
+	position: relative;
+	/* background-color: transparent; */
+	background-color: var(--clr-modal-background);
+	padding: 5%;
+	color: var(--clr-text-light);
+	/* font-size: var(--fs-services-content); */
+	/* font-weight: 1.2rem; */
+	/* border-right: 1rem; */
+	border-radius: 15px;
+	/* transition: background 0.5s 1s transform 0.5s; */
+	/* transition: 0.2s ease; */
+	box-shadow: 0px 0px 10px var(--clr-primary-accent),
+		0px 0px 10px var(--clr-primary-accent);
+	/* Glass 3D Values */
+	backdrop-filter: blur(20px);
+	/* display: grid; */
+	/* align-content: center; */
+	text-align: center;
+	/* Card Hover Effect */
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+}
+.portfolio_card:hover {
+	/* transform: translateY(-0.5rem); */
+	transition: 0.2s ease-in-out;
+	/* box-shadow: 0.8px 0.8px 15px var(--clr-primary-accent),
+		1px 1px 40px var(--clr-primary-accent); */
+}
+
+.portfolio_icon {
+	font-size: var(--fs-secondary-heading);
+	color: var(--clr-primary-accent);
+	margin-bottom: 2rem;
+}
+
+.portfolio_title {
+	font-size: var(--fs-services-title);
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+
+.portfolio_card p {
+	font-size: var(--fs-services-content);
+}
+
+.portfolio_button a {
+	font-size: var(--fs-button);
+	margin-top: 2rem;
+	display: inline-block;
+	padding: 0.9rem 1rem;
+	background-image: linear-gradient(
+		to right,
+		#9261f8,
+		#7f70fd,
+		#6c7dff,
+		#5b87ff,
+		#4d91ff
+	);
+	border-radius: 15px;
+	color: var(--clr-text-light);
+	text-decoration: none;
+	font-weight: var(--fw-bold);
+	opacity: 0;
+	cursor: pointer;
+	animation: slideBottom 1s ease forwards;
+	animation-delay: 0.8s;
+	transition: 0.8s;
+	/* box-shadow: 0 0 5px #0ef, 0 0 25px #0ef; */
+}
+
+.portfolio_button a:hover {
+	background-image: linear-gradient(
+		to left,
+		#9261f8,
+		#7f70fd,
+		#6c7dff,
+		#5b87ff,
+		#4d91ff
+	);
+	/* background-image: linear-gradient(
+		to right top,
+		#9261f8,
+		#7f70fd,
+		#6c7dff,
+		#5b87ff,
+		#4d91ff
+	); */
+	/* color: #081b29; */
+	/* box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
+		0 0 200px cyan; */
+}
+.button_icon {
+	font-size: var(--fs-button);
+	margin-left: 0.25rem;
+	transition: 0.3s;
+}
+.portfolio_button:hover .button_icon {
+	transform: translateX(0.25rem);
+}
+/*  ************************************************ */
+/*  ************* Portfolio Section End ************ /
 /*  ************************************************ */
 
 /* ========= SCROLL BAR ========== */

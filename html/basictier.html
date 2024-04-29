@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- SEO - meta<tags> for serach engine optimisation -->
+		<!-- Additional Meta Tags -->
+		<meta name="robots" content="index, follow">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- Primary Meta Tags -->
+		<title>Webify - Innovative Web Development Solutions | Your Digital Partner</title>
+		<meta name="description" content="Webify offers cutting-edge web development services to transform your business presence online. Specializing in custom websites, e-commerce solutions, and user-friendly designs.">
+
+		<!-- Keywords Meta Tag -->
+		<meta name="keywords" content="web development, website design, e-commerce solutions, custom web applications, user experience design, responsive web design, webify, digital transformation, business website, web development company">
+
+		<!-- Favicon Icons - Branding in tabs and Bookmarks -->
+
+		<meta name="msapplication-TileColor" content="#1b1b1f" />
+		<meta name="theme-color" content="#47b1e9" />
+
+
+		<!-- Standard favicon -->
+		<link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+
+		<!-- For iOS - 180x180px -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../assets/favicon/logo-w_180x180.webp"
+		/>
+
+		<!-- 32x32 and 16x16 pixel icons for general use -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon/logo-w_32x32.webp"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="../assets/favicon/logo-w_16x16.webp"
+		/>
+
+		<!-- Web App Manifest -->
+		<link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+
+		<!-- Main CSS -->
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!-- boxicons stylesheet for icons-->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<!-- vanilla-tilt.js library allows you to create a 3D tilt effect on any element -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+	</head>
+	<body onload="todayDate()">
+		<header class="header">
+			<div class="logo">
+				<img
+					src="../assets/logo/logo-plain_75x75.webp"
+					alt="Webify Company Logo"
+				/>
+
+				<div class="logoName">
+					<a href="#" class="logoName"
+						>Webify<!-- <span class="logo-span">.Si</span> --><sup
+							>&reg;</sup
+						></a
+					>
+				</div>
+			</div>
+
+			<div class="bx bx-menu" id="menu-icon"></div>
+
+			<nav class="navbar">
+				<a href="#home" style="--i: 1" class="active">Home</a>
+				<a href="#about" style="--i: 2">About</a>
+				<a href="#services" style="--i: 2">Services</a>
+				<a href="#portfolio" style="--i: 3">Products</a>
+				<a href="#contact-form" style="--i: 4">Contact</a>
+
+				<!-- Theme Change Button -->
+				<i class="bx bx-moon change-theme" id="theme-btn" style="--i: 5"></i>
+
+				<span class="active-nav"></span>
+			</nav>
+
+			<a href="#contact" class="btn-box-nav" style="--i: 6">Contact Us</a>
+		</header>
+
+		<!-- ******************************************************************************* -->
+		<!-- ----------------------------- Home Section Start ------------------------------ -->
+		<!-- ******************************************************************************* -->
+		<!-- <section class="home" id="home">
+			<div class="home-content">
+				<h1>Webify</h1>
+				<p class="home-content-intro">Web Solution Partners.</p>
+				<p class="home-content-intro"><span class="text"></span></p>
+				<p>
+					We are a web development company that can turn your ideas into
+					reality. Whether you need a simple landing page, a complex e-commerce
+					site, or anything in between, we have the skills and experience to
+					deliver.
+				</p>
+				<a href="#about" class="btn-box">More About Us</a>
+			</div>
+
+			<div class="home-img">
+				<img class="img" src="../assets/logo/logo-2.webp" alt="Webifi Company Branding" />
+			</div>
+		</section> -->
+
+		<!-- ******************************************************************************* -->
+		<!-- ---------------------------- About Section Start ------------------------------ -->
+		<!-- ******************************************************************************* -->
+		<!-- <section class="about" id="about">
+			<div class="about-img">
+				<img src="../assets/logo/logo-plain_819x819.webp" alt="Webify Company Branding" />
+			</div>
+			<div class="about-text">
+				<h2>About <span>Us</span></h2>
+				<h4>Who We Are</h4>
+				<p>
+					Webify is a team of passionate and professional web developers who
+					love to create amazing websites for our clients.
+					<span class="about-p450px"
+						>We have been in the web development industry for over 10 years, and
+						we have worked with clients from various sectors and regions.</span
+					>
+					We specialize in responsive web design, custom web development,
+					WordPress development, e-commerce solutions, and web maintenance.
+				</p>
+
+				<a href="#contact" class="btn-box">Get In Touch</a>
+			</div>
+		</section> -->
+
+		<!-- *************************************************************************************** -->
+		<!-- -------------------------------- Portfolio Section Start ---------------------------------->
+		<!-- *************************************************************************************** -->
+		<section class="portfolio" id="portfolio">
+			<div class="container">
+				<h1 class="title-portfolio">Our <span>Portfolio</span></h1>
+				<h4 class="sub-title-portfolio">Basic Tier</h4>
+
+				<div class="portfolio_container">
+					<!-- *********** Services Card Start ************** -->
+					<div class="portfolio_card">
+						<div>
+							<i class="bx bx-code portfolio_icon"></i>
+							<h2 class="portfolio_title">UI/UX Design</h2>
+							<p>
+								Specializing in creating user-friendly and aesthetically
+								pleasing designs. This includes designing intuitive user
+								interfaces.
+								<!-- conducting user research, and usability testing to ensure a
+							seamless user experience. -->
+							</p>
+						</div>
+
+						<!-- Go To Portfolio Project with a button -->
+						<span class="portfolio_button"
+							><a href="./html/basictier.html" target="blank">
+                                View More <i class="bx bx-chevron-right button_icon"></i>
+                            </a>
+						</span>
+
+					</div>
+					<!-- *********** Services Card End **************** -->
+					<!-- *********** Services Card Start ************** -->
+					<div class="services_content">
+						<div>
+							<i class="bx bx-crop services_icon"></i>
+							<h2 class="services_title">Web Development</h2>
+							<p>
+								Building responsive and interactive websites using HTML, CSS,
+								JavaScript, and modern frameworks like React.
+							</p>
+						</div>
+
+						<!-- Trigger the modal with a button -->
+						<span class="services_button">
+							View More
+							<i class="bx bx-chevron-right button_icon"></i>
+						</span>
+
+						<!-- Modal -->
+						<div class="services_modal">
+							<div class="services_modal-content">
+								<h4 class="services_modal-title">
+									Web <br />
+									Development
+								</h4>
+								<i class="bx bx-x services_modal-close"></i>
+
+								<ul class="services_modal-services">
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Pixel-Perfect Pages:</b> Weaving together HTML, CSS,
+											and JavaScript to create websites that look great and work
+											smoothly on any device.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Interactive Experiences:</b> Injecting life into web
+											pages with dynamic content and user interactions using the
+											latest frameworks like React.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>From Sketch to Launch:</b> Transforming your vision
+											into a digital reality, ensuring a seamless journey from
+											the first wireframe to the final live site.
+										</p>
+									</li>
+									<p>
+										These points emphasize our commitment to delivering
+										high-quality, responsive, and interactive web solutions.
+									</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- *********** Services Card End **************** -->
+					<!-- *********** Services Card Start ************** -->
+					<div class="services_content">
+						<div>
+							<i class="bx bxl-xing services_icon"></i>
+							<h2 class="services_title">Backend Development</h2>
+							<p>
+								Creating robust backend services using Node.js, Express.js, and
+								databases like MongoDB and PostgreSQL.
+							</p>
+						</div>
+
+						<!-- Trigger the modal with a button -->
+						<span class="services_button">
+							View More
+							<i class="bx bx-chevron-right button_icon"></i>
+						</span>
+
+						<!-- Modal -->
+						<div class="services_modal">
+							<div class="services_modal-content">
+								<h4 class="services_modal-title">
+									Backend <br />
+									Development
+								</h4>
+								<i class="bx bx-x services_modal-close"></i>
+
+								<ul class="services_modal-services">
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Code That Connects:</b> Building the backbone of web
+											applications with Node.js and Express.js for seamless data
+											flow and connectivity.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Database Dynamo:</b> Harnessing the power of MongoDB
+											and PostgreSQL to store, manage, and retrieve data with
+											speed and precision.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Reliability is Key:</b> Ensuring your application’s
+											backend is as sturdy as a rock, enabling consistent
+											performance and user trust.
+										</p>
+									</li>
+									<p>
+										These points underscore our dedication to creating
+										dependable and efficient backend systems that support the
+										smooth operation of your web applications.
+									</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- *********** Services Card End **************** -->
+					<!-- *********** Services Card Start ************** -->
+					<div class="services_content">
+						<div>
+							<i class="bx bxl-apple services_icon"></i>
+							<h2 class="services_title">API Development</h2>
+							<p>
+								Designing and developing RESTful APIs for seamless data exchange
+								between different software components.
+							</p>
+						</div>
+
+						<!-- Trigger the modal with a button -->
+						<span class="services_button">
+							View More
+							<i class="bx bx-chevron-right button_icon"></i>
+						</span>
+
+						<!-- Modal -->
+						<div class="services_modal">
+							<div class="services_modal-content">
+								<h4 class="services_modal-title">
+									API <br />
+									Development
+								</h4>
+								<i class="bx bx-x services_modal-close"></i>
+
+								<ul class="services_modal-services">
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Data Dance Floor:</b> Choreographing RESTful APIs that
+											ensure smooth and rhythmic data exchanges between diverse
+											software components.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Connectivity Craftsmanship:</b> Crafting gateways that
+											allow applications to communicate fluently and fetch data
+											without missing a beat.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Seamless Sync:</b> Building bridges that connect
+											islands of functionality, enabling a unified and cohesive
+											user experience.
+										</p>
+									</li>
+									<p>
+										These points highlight the importance of well-designed APIs
+										in creating a seamless and integrated digital ecosystem.
+									</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- *********** Services Card End **************** -->
+					<!-- *********** Services Card Start ************** -->
+					<div class="services_content">
+						<div>
+							<i class="bx bxs-bar-chart-alt-2 services_icon"></i>
+							<h2 class="services_title">Website Optimization</h2>
+							<p>
+								Enhancing website performance and user experience through
+								efficient coding practices and SEO optimization.
+							</p>
+						</div>
+
+						<!-- Trigger the modal with a button -->
+						<span class="services_button">
+							View More
+							<i class="bx bx-chevron-right button_icon"></i>
+						</span>
+
+						<!-- Modal -->
+						<div class="services_modal">
+							<div class="services_modal-content">
+								<h4 class="services_modal-title">
+									Website <br />
+									Optimization
+								</h4>
+								<i class="bx bx-x services_modal-close"></i>
+
+								<ul class="services_modal-services">
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Speedy Surfing:</b> Turbocharge your website’s loading
+											times with streamlined code that makes browsing a breeze.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>SEO Supercharge:</b> Boost your site’s search engine
+											ranking and visibility to attract more clicks and
+											customers.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Experience Excellence:</b> Enhance user satisfaction
+											with a smooth, responsive, and engaging online experience.
+										</p>
+									</li>
+									<p>
+										These points reflect our commitment to not just building
+										websites, but also fine-tuning them for peak performance and
+										user engagement.
+									</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- *********** Services Card End **************** -->
+					<!-- *********** Services Card Start ************** -->
+					<div class="services_content">
+						<div>
+							<i class="bx bxs-user-voice services_icon"></i>
+							<h2 class="services_title">Consultation</h2>
+							<p>
+								Providing expert advice on web development best practices, tech
+								stack selection, and project planning.
+							</p>
+						</div>
+
+						<!-- Trigger the modal with a button -->
+						<span class="services_button">
+							View More
+							<i class="bx bx-chevron-right button_icon"></i>
+						</span>
+
+						<!-- Modal -->
+						<div class="services_modal">
+							<div class="services_modal-content">
+								<h4 class="services_modal-title">Consultation</h4>
+								<i class="bx bx-x services_modal-close"></i>
+
+								<ul class="services_modal-services">
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Tech Talk:</b> Navigating the tech terrain to help you
+											pick the perfect stack for your project’s needs.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Blueprints to Bytes:</b> Translating big ideas into
+											actionable development plans that set the stage for coding
+											success.
+										</p>
+									</li>
+									<li class="services_modal-service">
+										<i class="bx bx-check-circle services_modal-icon"></i>
+										<p>
+											<b>Wisdom Webbing:</b> Offering insights on the latest web
+											development practices to keep your project trendy and
+											efficient.
+										</p>
+									</li>
+									<p>
+										These points encapsulate our approach to consultation –
+										guiding you through the technical maze with ease and
+										expertise.
+									</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- *********** Services Card End **************** -->
+				</div>
+			</div>
+		</section>
+
+		<!-- ************************************************************************************ -->
+		<!-- --------------------------- Products Section Start -------------------------------- -->
+		<!-- ************************************************************************************ -->
+
+		<section id="portfolio">
+			<div class="main-text">
+				<h2>Our <span>Products</span></h2>
+				<h4 class="sub-title-products">What We Offer</h4>
+
+				<div class="portfolio_container">
+					<!----------- Product Card Start ----------->
+					<div class="products_content">
+						<img src="../assets/portfolio-2.webp" alt="Tech Stack" />
+						<div class="layer">
+							<h5 class="products_title">Basic Tier:</h5>
+							<ul class="products-layer-ul-450px">
+								<li>
+									<p class="layer-p">Starter websites</p>
+								</li>
+								<li>
+									<p class="layer-p">Template-based designs</p>
+								</li>
+							</ul>
+
+							<!-- Trigger the product modal with a button -->
+							<span class="products_button"
+								>View More
+								<i class="bx bx-chevron-right button_icon-products"></i>
+							</span>
+
+							<!-- Modal -->
+							<div class="products_modal">
+								<div class="products_modal-content">
+									<h4 class="products_modal-title">Basic Tier:</h4>
+									<!-- Product Modal Close -->
+									<i class="bx bx-x products_modal-close"></i>
+
+									<ul class="products_modal-products">
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Starter websites</b> with essential features like
+												home, about, contact pages.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Template-based designs</b> for cost-effectiveness.
+											</p>
+										</li>
+										<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+										<p class="products_modal-product-benefits">
+											<b>Benefits:</b> Ideal for small businesses or
+											individuals needing a simple online presence quickly and
+											affordably.
+										</p>
+									</ul>
+
+									<!-- Product Modal Button - External Link to project -->
+									<span class="product_button-modal">
+										<a href="https://example.com/" target="blank">
+											<i
+												class="bx bx-link-external product-external-link-icon"
+											></i>
+										</a>
+									</span>
+									<!-- <a href="https://example.com/" target="blank">
+										<i class="bx bx-link-external"></i>
+									</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------- Product Card End ------------->
+					<!----------- Product Card Start ----------->
+					<div class="products_content">
+						<img src="../assets/portfolio-4.webp" alt="Tech Stack" />
+						<div class="layer">
+							<h5 class="products_title">Standard Tier:</h5>
+							<ul class="products-layer-ul-450px">
+								<li>
+									<p class="layer-p">Custom-designed websites</p>
+								</li>
+								<li>
+									<p class="layer-p">Responsive Design</p>
+								</li>
+								<li>
+									<p class="layer-p">Basic SEO</p>
+								</li>
+							</ul>
+
+							<!-- Trigger the product modal with a button -->
+							<span class="products_button"
+								>View More
+								<i class="bx bx-chevron-right button_icon-products"></i>
+							</span>
+
+							<!-- Modal -->
+							<div class="products_modal">
+								<div class="products_modal-content">
+									<h4 class="products_modal-title">Standard Tier:</h4>
+									<!-- Product Modal Close -->
+									<i class="bx bx-x products_modal-close"></i>
+
+									<ul class="products_modal-products">
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Custom-designed websites</b> with more pages and
+												features.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Responsive design</b> for compatibility across
+												devices.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<p><b>Basic SEO</b> to improve search engine visibility.</p>
+											</p>
+										</li>
+										<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+										<p class="products_modal-product-benefits">
+											<b>Benefits:</b>  Suited for businesses looking to establish
+											a more professional online presence with improved user
+											experience and discoverability.
+										</p>
+									</ul>
+
+									<!-- Product Modal Button - External Link to project -->
+									<span class="product_button-modal">
+										<a href="https://example.com/" target="blank">
+											<i
+												class="bx bx-link-external product-external-link-icon"
+											></i>
+										</a>
+									</span>
+									<!-- <a href="https://example.com/" target="blank">
+										<i class="bx bx-link-external"></i>
+									</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------- Product Card End ------------->
+					<!----------- Product Card Start ----------->
+					<div class="products_content">
+						<img src="../assets/portfolio-5.webp" alt="Tech Stack" />
+						<div class="layer">
+							<h5 class="products_title">Professional Tier:</h5>
+							<ul class="products-layer-ul-450px">
+								<li>
+									<p class="layer-p">Advanced Features</p>
+								</li>
+								<li>
+									<p class="layer-p">Enhanced SEO</p>
+								</li>
+								<li>
+									<p class="layer-p">Content Management System (CMS)</p>
+								</li>
+							</ul>
+
+							<!-- Trigger the product modal with a button -->
+							<span class="products_button"
+								>View More
+								<i class="bx bx-chevron-right button_icon-products"></i>
+							</span>
+
+							<!-- Modal -->
+							<div class="products_modal">
+								<div class="products_modal-content">
+									<h4 class="products_modal-title">Professional Tier:</h4>
+									<!-- Product Modal Close -->
+									<i class="bx bx-x products_modal-close"></i>
+
+									<ul class="products_modal-products">
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Advanced features</b> such as e-commerce functionality,
+										forums, or membership areas.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Enhanced SEO</b> strategies and analytics integration.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Content Management System (CMS)</b> for easy updates.
+											</p>
+										</li>
+										<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+										<p class="products_modal-product-benefits">
+											<b>Benefits: </b> Great for growing businesses that require
+											a website to handle more complex tasks and traffic.
+										</p>
+									</ul>
+
+									<!-- Product Modal Button - External Link to project -->
+									<span class="product_button-modal">
+										<a href="https://example.com/" target="blank">
+											<i
+												class="bx bx-link-external product-external-link-icon"
+											></i>
+										</a>
+									</span>
+									<!-- <a href="https://example.com/" target="blank">
+										<i class="bx bx-link-external"></i>
+									</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------- Product Card End ------------->
+					<!----------- Product Card Start ----------->
+					<div class="products_content">
+						<img src="../assets/portfolio-6.webp" alt="Tech Stack" />
+						<div class="layer">
+							<h5 class="products_title">Enterprise Tier:</h5>
+							<ul class="products-layer-ul-450px">
+								<li>
+									<p class="layer-p">Customized solutions</p>
+								</li>
+								<li>
+									<p class="layer-p">High-end Design</p>
+								</li>
+								<li>
+									<p class="layer-p">Scalable Architecture</p>
+								</li>
+							</ul>
+
+							<!-- Trigger the product modal with a button -->
+							<span class="products_button"
+								>View More
+								<i class="bx bx-chevron-right button_icon-products"></i>
+							</span>
+
+							<!-- Modal -->
+							<div class="products_modal">
+								<div class="products_modal-content">
+									<h4 class="products_modal-title">Enterprise Tier:</h4>
+									<!-- Product Modal Close -->
+									<i class="bx bx-x products_modal-close"></i>
+
+									<ul class="products_modal-products">
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Fully customized solutions</b> tailored to specific
+												business processes.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p><b>High-end design</b> with a focus on branding.</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Scalable architecture</b> to support large amounts of
+												traffic and data.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Advanced security features</b> to protect sensitive
+												information.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Ongoing maintenance and support.</b>
+											</p>
+										</li>
+										<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+										<p class="products_modal-product-benefits">
+											<b>Benefits: </b> Ideal for large organizations or those
+											with unique requirements that need a robust, secure, and
+											scalable web solution.
+										</p>
+									</ul>
+
+									<!-- Product Modal Button - External Link to project -->
+									<span class="product_button-modal">
+										<a href="https://example.com/" target="blank">
+											<i
+												class="bx bx-link-external product-external-link-icon"
+											></i>
+										</a>
+									</span>
+									<!-- <a href="https://example.com/" target="blank">
+										<i class="bx bx-link-external"></i>
+									</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------- Product Card End ------------->
+					<!----------- Product Card Start ----------->
+					<div class="products_content">
+						<img src="../assets/portfolio-3.webp" alt="Tech Stack" />
+						<div class="layer">
+							<h5 class="products_title">Additional Services:</h5>
+							<ul class="products-layer-ul-450px">
+								<li>
+									<p class="layer-p">Mobile App Development</p>
+								</li>
+								<li>
+									<p class="layer-p">Updates and maintenance</p>
+								</li>
+							</ul>
+
+							<!-- Trigger the product modal with a button -->
+							<span class="products_button"
+								>View More
+								<i class="bx bx-chevron-right button_icon-products"></i>
+							</span>
+
+							<!-- Modal -->
+							<div class="products_modal">
+								<div class="products_modal-content">
+									<h4 class="products_modal-title">Additional Services:</h4>
+									<!-- Product Modal Close -->
+									<i class="bx bx-x products_modal-close"></i>
+
+									<ul class="products_modal-products">
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Mobile app development</b> to complement the web
+												presence.
+											</p>
+										</li>
+										<li class="products_modal-product">
+											<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+											<p>
+												<b>Regular updates and maintenance</b> packages for keeping
+												the website up-to-date.
+											</p>
+										</li>
+										<!-- <i class="bx bx-check-circle products_modal-icon"></i> -->
+										<p class="products_modal-product-benefits">
+											Each tier offers <b>scalability</b> and <b>flexibility</b>,
+											allowing our clients to start with a basic package and upgrade
+											as their business grows. The key is to choose a tier that
+											aligns with your business goals, technical requirements, and
+											budget.
+										</p>
+									</ul>
+
+									<!-- Product Modal Button - External Link to project -->
+									<span class="product_button-modal">
+										<a href="https://example.com/" target="blank">
+											<i
+												class="bx bx-link-external product-external-link-icon"
+											></i>
+										</a>
+									</span>
+									<!-- <a href="https://example.com/" target="blank">
+										<i class="bx bx-link-external"></i>
+									</a> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!----------- Product Card End ------------->
+				</div>
+			</div>
+		</section>
+
+		<!-- ************************************************************************************ -->
+		<!-- --------------------------- Contact Section Start ---------------------------------- -->
+		<!-- ************************************************************************************ -->
+
+		<section class="contact" id="contact">
+			<div class="contact-text">
+				<h2>Contact <span>Us</span></h2>
+				<h4>Get in Touch</h4>
+				<p>
+					Webify is more than just a web development company. We are your
+					<b>partner in web success</b>. We work with you to understand your
+					goals, your audience, and your vision, and then we create a custom
+					website that suits your needs and budget. We would love to hear about
+					your project!
+				</p>
+				<div class="contact-list">
+					<li>
+						<i class="bx bx-send"></i> <a href="mailto:webify.projects@gmail.com">projects@webify.com</a>
+					</li>
+					<li>
+						<i class="bx bx-send"></i> <a href="tel:0645584110">+27 11 558 4110</a>
+					</li>
+				</div>
+				<div class="contact-icons">
+					<a href="https://www.linkedin.com/" target="_blank" style="--i: 6"
+						><i class="bx bxl-linkedin"></i
+					></a>
+					<a href="https://wa.me/27645584110" target="_blank" style="--i: 7"
+						><i class="bx bxl-whatsapp"></i
+					></a>
+					<a href="mailto:webify.projects@gmail.com" style="--i: 8"><i class="bx bx-mail-send"></i></a>
+					<!-- <a href="https://www.dribbble.com/" target="_blank"
+						><i class="bx bxl-dribbble"></i
+					></a> -->
+				</div>
+			</div>
+
+			<div class="contact-form" id="contact-form">
+				<form action="">
+					<input type="" placeholder="Enter Your Name" required />
+					<input type="email" placeholder="Enter Your Email" required />
+
+					<input type="" placeholder="Enter Your Subject" />
+					<textarea
+						name=""
+						id=""
+						cols="40"
+						rows="10"
+						placeholder="Enter Your Message"
+						required
+					></textarea>
+					<input id="form-btn" type="submit" value="Submit" class="send" />
+				</form>
+			</div>
+		</section>
+
+		<!-- ************ Footer ************* -->
+		<footer class="footer">
+			<div class="footer-text">
+				<p>
+					Copyright<sup>&copy;</sup> <span id="date"></span> Webify<sup>&reg;</sup> | All Rights Reserved | <a href="./html/terms.html">
+					Terms and Conditions
+				</a>
+				</p>
+			</div>
+
+			<div class="footer-iconTop">
+
+				<a href="#"><i class='bx bxs-chevron-up'></i></a>
+				<!-- <a href="#"><i class="bx bx-up-arrow-alt"></i></a> -->
+			</div>
+			<!-- <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a> -->
+			<!-- <a href="#"><i class="bx bxs-up-arrow-square"></i></a> -->
+		</footer>
+
+		<script src="../js/main.js"></script>
+        <script src="../js/glass.js"></script>
+		<script src="../js/todayDate.js"></script>
+	</body>
+</html>
