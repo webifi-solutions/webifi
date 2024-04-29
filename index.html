@@ -945,6 +945,12 @@
 
 			<div class="contact-form" id="contact-form">
 				<form action="https://formsubmit.co/f94751880d5acce9e1189098252b6fb6" method="POST">
+					<!-- Honeypot -->
+					<input type="text" name="_honey" style="display: none;">
+
+					<!-- Success Page -->
+					<input type="hidden" name="_next" value="https://webify-io.github.io/webify/success.html">
+
 					<input type="text" name="name" placeholder="Enter Your Name" required />
 					<input type="email" name="email" placeholder="Enter Your Email" required />
 
