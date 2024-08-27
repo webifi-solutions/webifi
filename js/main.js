@@ -214,7 +214,7 @@ window.addEventListener('click', (event) => {
 });
 
 /*=============== DARK LIGHT THEME ===============*/
-const themeButton = document.getElementById('theme-btn');
+/* const themeButton = document.getElementById('theme-btn');
 const darkTheme = 'dark-theme';
 const iconTheme = 'bx-sun';
 
@@ -248,3 +248,4 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-theme', getCurrentTheme());
 	localStorage.setItem('selected-icon', getCurrentIcon());
 });
+ */

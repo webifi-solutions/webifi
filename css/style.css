@@ -219,10 +219,21 @@ body.dark-theme {
     Color changes in some parts of
     the website, in dark theme
 ==========*/
+.dark-theme section:nth-child(even) {
+	background: hsl(200, 80%, 38%);
+}
 
 .dark-theme .home-content p {
-	color: #081b29;
 	font-weight: var(--fw-semi-bold);
+}
+.dark-theme .about-text p {
+	font-weight: var(--fw-semi-bold);
+}
+.dark-theme .contact-text p {
+	font-weight: var(--fw-semi-bold);
+}
+.dark-theme .navbar a {
+	font-weight: 800;
 }
 .dark-theme .header.sticky {
 	background: var(--clr-background-primary-accent);
@@ -254,12 +265,12 @@ body.dark-theme {
 .dark-theme .contact-form form input {
 	background: #9fa4ba;
 	color: #000;
-	font-weight: 500;
+	font-weight: var(--fw-semi-bold);
 }
 .dark-theme .contact-form form textarea {
 	background: #9fa4ba;
 	color: #000;
-	font-weight: 500;
+	font-weight: var(--fw-semi-bold) 0;
 }
 .dark-theme .contact-form form input::placeholder {
 	color: #081b29;
@@ -280,30 +291,94 @@ body.dark-theme {
 } */
 
 /*=============== BASE ===============*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	border: none;
 	outline: none;
 	border: none;
 	outline: none;
-	scroll-behavior: smooth;
-	font-family: 'Red Hat Display', 'Inter', 'poppins', sans-serif;
 }
 html {
 	/* font-size: 62.5%; */
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 body {
 	color: #ededed;
 	background: var(--clr-background-primary-accent);
+	font-family: 'Red Hat Display', 'Inter', 'poppins', sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 section {
 	min-height: 100vh;
 	/* min-height: 100vh; */
 	/* min-height: 100svh; */
 	padding: 5rem 5% 2rem;
+}
+/*
+  * Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/* Base */
+button {
+	border: none;
+	outline: none;
+}
+
+/* ======= Light-Dark Toggle ======= */
+.checkbox {
+	opacity: 0;
+	position: absolute;
+	display: none;
+}
+.checkbox-label {
+	background-color: var(--clr-background-accent-2nd-vite);
+	width: 50px;
+	height: 26px;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.bx-moon {
+	color: #f1c40f;
+}
+.bx-sun {
+	color: #f39c12;
+}
+.checkbox-label .ball {
+	background-color: #fff;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 0.2s linear;
+}
+.checkbox:checked + .checkbox-label .ball {
+	transform: translateX(24px);
+}
+#checkbox {
+	display: none;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -1304,7 +1379,6 @@ form textarea:focus {
 	background: var(--clr-background-primary-accent);
 	border-top: 2px solid var(--clr-text-light);
 	/* background: rgb(7, 85, 91); */
-	margin-top: 2rem;
 }
 .footer-text p {
 	/* max-width: 100%; */
@@ -1627,8 +1701,11 @@ form textarea:focus {
 	#menu-icon {
 		font-size: 3rem;
 		display: block;
-		/* order: -1;
-		left: 0; */
+		order: 1;
+		right: 0;
+	}
+	.theme-toggle {
+		padding-left: 6rem;
 	}
 	.dark-theme .navbar {
 		background: #9fa4ba;
@@ -1774,6 +1851,13 @@ form textarea:focus {
 		/* background: hsl(228, 8%, 95%); */
 		background: #47b1e9;
 	}
+	.dark-theme .footer {
+		/* background: hsl(228, 8%, 95%); */
+		background: #47b1e9;
+	}
+	.dark-theme .footer a {
+		color: #fff;
+	}
 	.header {
 		background: var(--clr-background-secondary-accent);
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -1843,7 +1927,7 @@ form textarea:focus {
 	}
 	.contact {
 		grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
-		padding: 5rem 5% 4rem 5%;
+		padding: 5rem 5%;
 	}
 	.contact-form form input,
 	form textarea {
