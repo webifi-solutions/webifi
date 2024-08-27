@@ -263,14 +263,14 @@ body.dark-theme {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .dark-theme .contact-form form input {
-	background: #9fa4ba;
+	background: #f0ebf8;
 	color: #000;
 	font-weight: var(--fw-semi-bold);
 }
 .dark-theme .contact-form form textarea {
-	background: #9fa4ba;
+	background: #f0ebf8;
 	color: #000;
-	font-weight: var(--fw-semi-bold) 0;
+	font-weight: var(--fw-semi-bold);
 }
 .dark-theme .contact-form form input::placeholder {
 	color: #081b29;
@@ -364,7 +364,7 @@ button {
 	color: #f39c12;
 }
 .checkbox-label .ball {
-	background-color: #fff;
+	background-color: #f0ebf8;
 	width: 22px;
 	height: 22px;
 	position: absolute;
@@ -1856,7 +1856,7 @@ form textarea:focus {
 		background: #47b1e9;
 	}
 	.dark-theme .footer a {
-		color: #ededed;
+		color: #f0ebf8;
 	}
 	.dark-theme .footer-iconTop i {
 		box-shadow: 0 12px 24px hsla(0, 0%, 0%, 0.3);
