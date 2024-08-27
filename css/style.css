@@ -1856,7 +1856,10 @@ form textarea:focus {
 		background: #47b1e9;
 	}
 	.dark-theme .footer a {
-		color: #fff;
+		color: #ededed;
+	}
+	.dark-theme .footer-iconTop i {
+		box-shadow: 0 12px 24px hsla(0, 0%, 0%, 0.3);
 	}
 	.header {
 		background: var(--clr-background-secondary-accent);
