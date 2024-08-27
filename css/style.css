@@ -303,7 +303,7 @@ section {
 	min-height: 100vh;
 	/* min-height: 100vh; */
 	/* min-height: 100svh; */
-	padding: 10rem 5% 2rem;
+	padding: 5rem 5% 2rem;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -590,7 +590,7 @@ section {
 	margin-top: 4rem;
 } */
 .services {
-	padding: 3% 5% 2rem;
+	padding: 3% 5% 0;
 	/* color: aliceblue;
 	font-size: var(--fs-500);
 	line-height: 1.4;
@@ -802,9 +802,7 @@ section {
 	visibility: visible;
 }
 
-/*  ************************************************************************* */
 /*  ************************* Product Section Start ************************* */
-/*  ************************************************************************* */
 /* .main-text {
 	padding-top: 2rem;
 } */
@@ -1328,8 +1326,6 @@ form textarea:focus {
 }
 .footer-iconTop {
 	position: fixed;
-	/* bottom: 2%;
-	right: 2%; */
 	bottom: -100px;
 	right: 50px;
 	visibility: hidden;
@@ -1392,13 +1388,9 @@ form textarea:focus {
 	line-height: 1.6;
 	margin-bottom: 1rem;
 }
-/*  ************************************************ */
 /*  ****** Terms and Conditions Section End ****** */
-/*  ************************************************ */
 
-/*  ************************************************ */
 /*  *********** Portfolio Section Start ************ /
-/*  ************************************************ */
 /* #portfolio {
 	color: aliceblue;
 	font-size: var(--fs-500);
@@ -1828,7 +1820,9 @@ form textarea:focus {
 		/* width: 30rem; */
 	}
 	.portfolio_container {
-		padding: 0 2rem;
+		margin: 2.5rem auto;
+		width: 100%;
+		padding: 0 1rem;
 	}
 	.products_content {
 		box-shadow: 0px 0px 5px var(--clr-primary-accent),
