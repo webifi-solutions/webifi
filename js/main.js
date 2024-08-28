@@ -98,7 +98,7 @@ window.addEventListener('scroll', function () {
 	clearTimeout(window.footerIconTimeout);
 	window.footerIconTimeout = setTimeout(function () {
 		footerIconTop.classList.add('hidden');
-	}, 2000); // Delay in milliseconds
+	}, 8000); // Delay in milliseconds
 });
 
 /* document
