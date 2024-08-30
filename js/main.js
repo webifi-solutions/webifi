@@ -73,7 +73,7 @@ window.onscroll = () => {
 /* =================== REMOVE BOTTOM SCROLL ICON =================== */
 // Make the footer-scroll icon to become visible only after a certain scroll position
 /* window.addEventListener('scroll', function () {
-	var footerIconTop = document.querySelector('.footer-iconTop');
+	var footerIconTop = document.querySelector('.scroll-top');
 	footerIconTop.classList.toggle('active', window.scrollY > -100);
 	footerIconTop.classList.toggle('hidden', window.scrollY <= 0);
 }); */
@@ -81,7 +81,7 @@ window.onscroll = () => {
 // To make the footer-scroll icon visible only after a certain scroll position and hide it once scrolling stops:
 
 window.addEventListener('scroll', function () {
-	var footerIconTop = document.querySelector('.footer-iconTop');
+	var footerIconTop = document.querySelector('.scroll-top');
 
 	// Set the scroll position at which the icon becomes visible
 	var showAfterScroll = 100; // in pixels
@@ -102,7 +102,7 @@ window.addEventListener('scroll', function () {
 });
 
 /* document
-	.querySelector('.footer-iconTop a')
+	.querySelector('.scroll-top a')
 	.addEventListener('click', function (event) {
 		event.preventDefault();
 		window.scrollTo({ top: 0, behavior: 'smooth' });

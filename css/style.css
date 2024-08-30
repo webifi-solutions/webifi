@@ -1414,7 +1414,7 @@ form textarea:focus {
 .footer-text a:hover {
 	color: #30c5ff;
 }
-.footer-iconTop {
+.scroll-top {
 	position: fixed;
 	bottom: -100px;
 	right: 50px;
@@ -1423,15 +1423,15 @@ form textarea:focus {
 	/* transition: visibility 0s, bottom 0.3s ease; */
 }
 
-.footer-iconTop.active {
+.scroll-top.active {
 	visibility: visible;
-	bottom: 50px;
+	bottom: 110px;
 }
-.footer-iconTop.hidden {
+.scroll-top.hidden {
 	visibility: hidden;
 }
 
-.footer-iconTop a i {
+.scroll-top a i {
 	color: #fff;
 	background: var(--clr-primary-accent);
 	font-size: var(--fs-social);
@@ -1440,7 +1440,7 @@ form textarea:focus {
 	transition: 0.5s ease;
 }
 
-.footer-iconTop:hover i {
+.scroll-top:hover i {
 	/* color: #0ef; */
 	/* color: #000; */
 	/* background: #000; */
@@ -1448,7 +1448,42 @@ form textarea:focus {
 	transform: translateY(-0.2rem); /* added */
 	transition: 0.5s ease;
 }
-.footer-iconTop:hover {
+.scroll-top:hover {
+	opacity: 1;
+}
+
+.whatsapp-scroll {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+}
+.whatsapp-scroll a i {
+	color: #fff;
+	background: #25d366;
+	font-size: 2.4rem;
+	padding: 0.1rem;
+	border-radius: 5px;
+	transition: 0.5s ease;
+}
+/* .whatsapp-scroll a i:hover {
+	box-shadow: 0 0 2rem #0ef;
+	transform: scale(1.1);
+	transition: 0.5s ease;
+} */
+.icon-box {
+	position: absolute;
+	color: #fff;
+	background: #25d366;
+	top: 50%;
+	right: calc(100% + 15px); /* Move to the left of the parent */
+	padding: 0 0.5rem;
+	transform: translateY(-50%);
+	opacity: 0;
+	border-radius: 20px;
+	white-space: nowrap;
+	transition: right 0.3s ease, opacity 0.3s ease;
+}
+.whatsapp-scroll:hover .icon-box {
 	opacity: 1;
 }
 
@@ -1913,7 +1948,8 @@ form textarea:focus {
 	form textarea {
 		width: 100%;
 	}
-	.footer-iconTop {
+	.scroll-top,
+	.whatsapp-scroll {
 		right: 1rem;
 	}
 }
@@ -1930,7 +1966,7 @@ form textarea:focus {
 	.dark-theme .footer a {
 		color: #f0ebf8;
 	}
-	.dark-theme .footer-iconTop i {
+	.dark-theme .scroll-top i {
 		box-shadow: 0 12px 24px hsla(0, 0%, 0%, 0.3);
 	}
 	.header {
