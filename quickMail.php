@@ -27,7 +27,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $number = $_POST['number'];
 $subject = $_POST['subject'];
-$message = $_POST['message'];
+$message = "Name: $name\nEmail: $email\nContact Number: $number\n\nMessage: $subject\n" . $_POST['message'];
 
 $mailheader = 'From: '.$name. '<'.$email.'>\r\n';
 $recipient = "info@webify.org.za";
