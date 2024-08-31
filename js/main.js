@@ -249,3 +249,41 @@ themeButton.addEventListener('click', () => {
 	localStorage.setItem('selected-icon', getCurrentIcon());
 });
  */
+
+/*=============== Toggle the Quick Contact Form ===============*/
+document
+	.getElementById('toggle-form')
+	.addEventListener('click', function (event) {
+		var form = document.getElementById('quick-contact-form');
+		var icon = document.getElementById('toggle-icon');
+		if (form.style.display === 'none' || form.style.display === '') {
+			form.style.display = 'block';
+			icon.className = 'bx bx-x'; // Change icon class to bx-x
+		} else {
+			form.style.display = 'none';
+			icon.className = 'bx bx-mail-send'; // Change icon class back to bx-mail-send
+		}
+		event.stopPropagation(); // Prevent the click from propagating to the document
+	});
+
+// Close the form when clicking or scrolling outside of it
+document.addEventListener('click', function (event) {
+	var form = document.getElementById('quick-contact-form');
+	var toggleButton = document.getElementById('toggle-form');
+	if (
+		form.style.display === 'block' &&
+		!form.contains(event.target) &&
+		!toggleButton.contains(event.target)
+	) {
+		form.style.display = 'none';
+		document.getElementById('toggle-icon').className = 'bx bx-mail-send'; // Reset icon class
+	}
+});
+
+document.addEventListener('scroll', function () {
+	var form = document.getElementById('quick-contact-form');
+	if (form.style.display === 'block') {
+		form.style.display = 'none';
+		document.getElementById('toggle-icon').className = 'bx bx-mail-send'; // Reset icon class
+	}
+});

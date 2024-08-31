@@ -63,6 +63,16 @@
 		/>
 		<!-- Load library from the CDN for typed.js from [https://github.com/mattboldt/typed.js] -->
 		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+		<!-- Success Pop-up -->
+		<script>
+			window.onload = function () {
+				const urlParams = new URLSearchParams(window.location.search);
+				if (urlParams.get('status') === 'success') {
+					alert('Mail was successfully sent!');
+				}
+			};
+		</script>
 	</head>
 	<body onload="todayDate()">
 		<header class="header">
