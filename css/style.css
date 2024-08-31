@@ -1308,9 +1308,11 @@ button {
 	flex-direction: column;
 	gap: 0.3rem;
 	/* margin-left: 2rem; */
+	justify-content: center;
+	align-items: center;
 }
 .contact-form form input,
-form textarea {
+.contact-form form textarea {
 	border: 2px solid transparent;
 	/* inner glow */
 	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.025);
@@ -1526,6 +1528,9 @@ form textarea {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
 	z-index: 101;
 }
+/* .quick-contact-form .g-recaptcha {
+	transform: scale(0.935);
+} */
 .header-qc {
 	background-color: #26a7d8;
 	padding: 0.5rem 1rem 1rem;
@@ -1554,7 +1559,7 @@ form textarea {
 	/* background: var(--clr-modal-background); */
 	/* background: #1d1e22; */
 	/* background: #555557; */
-	color: #9fa4ba;
+	/* color: #9fa4ba; */
 	/* color: #000; */
 	font-size: var(--fs-body-p);
 	font-weight: var(--fw-semi-bold);
@@ -1563,7 +1568,7 @@ form textarea {
 
 .quick-contact-form form .send {
 	background: var(--clr-modal-background);
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 }
 .quick-contact-form form .send:hover {
 	background: var(--clr-modal-background);
@@ -2036,8 +2041,21 @@ form textarea {
 	.quick-contact-icon {
 		right: 1rem;
 	}
+	.scroll-top.active {
+		bottom: 100px;
+	}
 	.quick-contact-form {
 		right: 4rem;
+	}
+
+	.whatsapp-scroll {
+		bottom: 50px;
+	}
+	.whatsapp-scroll a i {
+		box-shadow: none;
+	}
+	.quick-contact-icon {
+		display: none;
 	}
 }
 
